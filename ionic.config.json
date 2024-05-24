@@ -1,7 +1,10 @@
 {
-  "name": "appTest",
+  "name": "VisualApp",
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "resources": {
+    "icon": "src/assets/icon.png"
+  }
 }

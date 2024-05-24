@@ -25,6 +25,21 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+
+ion-toolbar{
+    --background : #9FEFF5;
+    --color : #54fa94
+}
+
+
+ion-button{
+    --background: #9FEFF5;
+    --color: #343434;
+    --border-color: #9FEFF5;
+}
+
+
+
 ion-button {
     text-transform: none;
 }
@@ -128,4 +143,20 @@ ion-button {
     .add-update-modal {
         --height: 680px;
     }
+}
+@font-face{
+    font-family: vintage;
+    src: url('./theme/Vintage.ttf');
+}
+@font-face{
+    font-family: ananda;
+    src: url('./theme/Ananda.ttf');
+}
+@font-face{
+    font-family: campana;
+    src: url('./theme/Campana.otf');
+}
+@font-face{
+    font-family: krinkes;
+    src: url('./theme/Krinkes.ttf');
 }

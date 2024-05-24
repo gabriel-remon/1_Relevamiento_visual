@@ -35,15 +35,11 @@
             </div>
 
             <p class="ion-text-end" routerLink="forgot-password"> ¿olvidaste tu contraseña?</p>
+            <p class="ion-text-end"> todavia no eres miembro? <strong routerLink="register" class="color-lindo">registrate aqui</strong></p>
 
             <ion-button  expand="block" mode="ios" type="submit" class="submit" [disabled]="form.invalid">
                 Ingresar
                 <ion-icon slot="end" name="log-in-outline"></ion-icon>
-            </ion-button>
-
-            <ion-button class="ion-margin-top" routerLink="register" routerLinkActive="router-link-active"  expand="block" mode="ios" fill="outline">
-                Registrate
-                <ion-icon slot="end" name="person-add-outline"></ion-icon>
             </ion-button>
 
         </form>

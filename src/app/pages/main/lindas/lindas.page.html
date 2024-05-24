@@ -1,0 +1,55 @@
+<app-header backButton="/main"></app-header>
+
+
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="confimarImagen" *ngIf="confirmarImagen">
+
+    <div class="contenedorImagen">
+      <img [src]="imgSelec.src" alt="" class="fotoSeleccionada">
+    </div>
+
+    <div class="contenedorBotones">
+      <ion-button class="salaChat d-flex-center botonSeleccion"  (click)="confirmarImagen=false">
+        cancelar
+      </ion-button>
+      <ion-button class="salaChat d-flex-center botonSeleccion" (click)="confirmarImagen=false && votarImagen()">
+        votar esta foto
+        <ion-icon slot="icon-only" name="heart"></ion-icon>
+      </ion-button>
+    </div>
+
+  </div>
+
+
+  <ion-button class="salaChat d-flex-center cuartob botonCosas">
+    tomar nueva foto linda
+    <ion-icon slot="icon-only" name="camera"></ion-icon>
+  </ion-button>
+
+  <ion-button class="salaChat d-flex-center cuartob botonCosas" routerLink="mias">
+    Mis fotos lindas
+    <ion-icon slot="icon-only" name="save"></ion-icon>
+  </ion-button>
+
+
+  <div class="contenedorImagenes">
+
+    <img *ngFor="let foto of fotos" [src]="foto.src" (click)="seleccionarImagen(foto)">
+
+  </div>
+
+  <div id="chart">
+    <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [labels]="chartOptions.labels"
+    [fill]="chartOptions.fill"
+    [stroke]="chartOptions.stroke"
+    [responsive]="chartOptions.responsive"
+  ></apx-chart>
+  </div>
+
+</ion-content>

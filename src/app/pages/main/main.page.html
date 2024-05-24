@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>main</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">main</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+    <ion-button class="salaChat d-flex-center cuartoa botonCosas"  routerLink="lindas">
+        
+        <p>Cosas lindas</p>
+        <img src="assets/lindas.jpg" alt="">
+    </ion-button>
+    
+    <ion-button class="salaChat d-flex-center cuartob botonCosas"  routerLink="feas" >
+        <p>Cosas feas</p>
+          <img src="assets/feas.jpg" alt="">
+        
+      </ion-button>
+
+    <ion-button (click)="singOut()" class="d-flex-center" color="danger">
+        cerrar sesion
+      </ion-button>
 </ion-content>

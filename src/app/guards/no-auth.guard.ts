@@ -14,7 +14,7 @@ return new Promise((resolve)=>{
     if(!auth || !user){
       resolve(true)
     }else{
-      resolve(router.createUrlTree(['/main/home']))
+      resolve(router.createUrlTree(['/main']))
     }
   })
 })

@@ -10,6 +10,14 @@ const routes: Routes = [
   },  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'lindas',
+    loadChildren: () => import('./lindas/lindas.module').then( m => m.LindasPageModule)
+  },
+  {
+    path: 'feas',
+    loadChildren: () => import('./feas/feas.module').then( m => m.FeasPageModule)
   }
 
 ];
