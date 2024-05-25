@@ -1,0 +1,110 @@
+.imagen img{
+    max-height: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+.contenedorImagenes{
+    margin: 20px;
+    padding: 10px;
+    height: 83%;
+    width: 90%;
+    position: relative;
+    overflow: auto;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+    border-radius: 20px;
+
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+h2{
+    text-align: center;
+}
+
+ion-button{
+    margin: 10px 20px 10px 20px;
+}
+
+.botonSeleccion{
+    margin: 10px
+}
+
+.confimarImagen{
+
+  
+    margin: 20px;
+    margin-top: 50px;
+    padding: 30px;
+    
+    position: absolute;
+    overflow: auto;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  width: 350px;
+  height: 500px;
+  background-color:#1359f5 ;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    z-index: 9999;
+
+}
+
+.fotoSeleccionada{
+
+    height: 100%;
+    width: auto; 
+    margin: auto;
+}
+
+.contenedorBotones{
+
+    display: flex;
+    height: 1/4;
+    flex-direction: row;
+}
+
+.contenedorImagen{
+    align-items: center;
+    height: 350px;
+    width: 250px;
+    display: flex;
+  justify-content: space-between;
+}
+
+
+  .chart{
+    margin-top: 20px;
+  }
+
+  .imagen{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 2px 10px 2px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    max-height: 170px;
+    max-height: 170px;
+  }
+  p{
+    margin: 0 5px 0 5px;
+  }
+
+  
+  app-heade, ion-button, #header,ion-toolbar{
+    --background: #52fa94;
+    --color: #343434;
+    --border-color: #52fa94;
+}
+
+.admin{
+    font-size: 16px;
+    font-family: krinkes;
+
+}

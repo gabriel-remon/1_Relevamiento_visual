@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { Foto } from 'src/app/models/foto.model';
+import { FirebaeService } from 'src/app/services/firebae.service';
+import { FotosService } from 'src/app/services/fotos.service';
 
 @Component({
   selector: 'app-mias',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiasPage implements OnInit {
 
-  constructor() { }
+  //base de datos
+  baseDatos = "lindas"
+  
+  fotoSvc = inject(FotosService)
+  fotos:Foto[] =[]
+  user:any;
+  authSvc = inject(FirebaeService)
+  confirmarImagen:boolean=false;
+  imgSelec:Foto;
 
-  ngOnInit() {
+  constructor() { 
+    this.user = this.authSvc.getauth().currentUser
   }
 
+  
+  ngOnInit() {
+    this.fotoSvc.getMisFotos(this.baseDatos).subscribe((docSnap)=>{
+      this.fotos=[]
+        docSnap.map(user=>{
+          this.fotos.push(user.payload.doc.data() as Foto)
+        })
+  })}
+
+
+  seleccionarImagen(foto:any){
+    this.confirmarImagen=true;
+    this.imgSelec=foto
+  }
 }

@@ -1,13 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>mias</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header backButton="/main/lindas"></app-header>
+
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">mias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <div class="confimarImagen" *ngIf="confirmarImagen">
+
+    <div class="contenedorImagen">
+      <img [src]="imgSelec.src" alt="" class="fotoSeleccionada">
+    </div>
+
+    <div class="contenedorBotones">
+      <ion-button class="salaChat d-flex-center botonSeleccion"  (click)="confirmarImagen=false">
+        cancelar
+      </ion-button>
+    </div>
+
+  </div>
+
+  <h2>Mis imagenes</h2>
+
+  <div class="contenedorImagenes">
+
+    <div *ngFor="let foto of fotos" class="imagen">
+      <p>Autor: {{foto.nombre_usurio}}</p>
+      <img  [src]="foto.src" (click)="seleccionarImagen(foto)">
+      <p> {{foto.votos.length}} <ion-icon slot="icon-only" [name]="foto.votos.includes(user.uid)?'heart-circle':'heart'"></ion-icon></p>
+    </div>
+
+  </div>
+
 </ion-content>

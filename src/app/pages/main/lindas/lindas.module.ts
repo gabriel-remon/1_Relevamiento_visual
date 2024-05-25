@@ -9,6 +9,8 @@ import { LindasPageRoutingModule } from './lindas-routing.module';
 import { LindasPage } from './lindas.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { NgxEchartsModule } from 'ngx-echarts';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     IonicModule,
     LindasPageRoutingModule,
     SharedModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    NgxEchartsModule.forRoot({echarts: () => import('echarts')})
   ],
   declarations: [LindasPage]
 })

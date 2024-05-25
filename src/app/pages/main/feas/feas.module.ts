@@ -8,6 +8,7 @@ import { FeasPageRoutingModule } from './feas-routing.module';
 
 import { FeasPage } from './feas.page';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     IonicModule,
     FeasPageRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxEchartsModule.forRoot({echarts: () => import('echarts')})
   ],
   declarations: [FeasPage]
 })

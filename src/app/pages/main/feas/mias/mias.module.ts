@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MiasPageRoutingModule } from './mias-routing.module';
 
 import { MiasPage } from './mias.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MiasPageRoutingModule
+    MiasPageRoutingModule,
+    SharedModule
   ],
   declarations: [MiasPage]
 })

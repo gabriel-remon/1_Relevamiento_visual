@@ -3,17 +3,27 @@
 
     <ion-button class="salaChat d-flex-center cuartoa botonCosas"  routerLink="lindas">
         
+      <div class="divAux">
+
         <p>Cosas lindas</p>
         <img src="assets/lindas.jpg" alt="">
+      </div>
+
     </ion-button>
     
-    <ion-button class="salaChat d-flex-center cuartob botonCosas"  routerLink="feas" >
+    <ion-button (click)="singOut()" class="d-flex-center" color="danger">
+      cerrar sesion
+    </ion-button>
+
+    <ion-button class="salaChat d-flex-center cuartob botonCosas feas"  routerLink="feas" >
+
+      <div class="divAux">
+
         <p>Cosas feas</p>
           <img src="assets/feas.jpg" alt="">
+      </div>
         
       </ion-button>
 
-    <ion-button (click)="singOut()" class="d-flex-center" color="danger">
-        cerrar sesion
-      </ion-button>
+   
 </ion-content>
