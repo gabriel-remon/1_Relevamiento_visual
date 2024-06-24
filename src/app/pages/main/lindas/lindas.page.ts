@@ -172,12 +172,20 @@ export class LindasPage implements OnInit {
     this.imgSelec=foto
   }
 
-  votarImagen(){
+  async votarImagen(){
     
     if(this.imgSelec.votos.includes(this.user.uid)){
-      console.log("ya voto esta foto")
-    }else{
-      console.log("nuevo voto registrado")
+      const mensaje = await this.alertController.create({
+        message:"Ya votó esta foto, no puede votar dos veces una misma foto",
+        buttons:["ok"]
+      })
+      await mensaje.present()
+    } else {
+      const mensaje = await this.alertController.create({
+        message:"Nuevo votó registrado",
+        buttons:["ok"]
+      })
+      await mensaje.present()
       this.fotoSvc.votarFoto(this.baseDatos,this.imgSelec)
     }
     this.imgSelec= null
